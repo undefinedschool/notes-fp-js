@@ -562,8 +562,9 @@ Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funcio
 5. Eliminar los duplicados de un array, utilizando `Array.filter()`.
 6. Eliminar los duplicados de un array, utilizando `Array.reduce()`.
 7. Eliminar los duplicados de un array, utilizando `Set`.
-8. Implementar la función `map()` de `Array` usando `reduce()`.
-9. Implementar la función `filter()` de `Array` usando `reduce()`.
+8. Chequear si una palabra es _palíndromo_sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+9. Implementar la función `map()` de `Array` usando `reduce()`.
+10. Implementar la función `filter()` de `Array` usando `reduce()`.
 
 ## Lectura recomendada: [Functional-Light JS - Kyle Simpson](https://github.com/getify/Functional-Light-JS)
 
@@ -572,3 +573,5 @@ Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funcio
 <sup id="cite_note-1"><a href="#cite_ref-1">1</a></sup> Esto se que se conoce como [idempotencia](https://es.wikipedia.org/wiki/Idempotencia).
 
 <sup id="cite_note-2"><a href="#cite_ref-2">2</a></sup> Se conoce como _mutator_ a los métodos/funciones que modifican los objetos recibidos como argumentos, y _accesor_ a las funciones que retornan un nuevo valor, basado en el input.
+
+<sup id="cite_note-3"><a href="#cite_ref-3">3</a></sup> Un palíndromo es una palabra o frase que se lee igual para adelante y para atrás.
