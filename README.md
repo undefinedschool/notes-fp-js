@@ -562,7 +562,7 @@ Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funcio
 5. Eliminar los duplicados de un array, utilizando `Array.filter()`.
 6. Eliminar los duplicados de un array, utilizando `Array.reduce()`.
 7. Eliminar los duplicados de un array, utilizando `Set`.
-8. Chequear si una palabra es _palíndromo_sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+8. Chequear si una palabra es _palíndromo_<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 9. Implementar la función `map()` de `Array` usando `reduce()`.
 10. Implementar la función `filter()` de `Array` usando `reduce()`.
 
