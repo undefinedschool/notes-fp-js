@@ -23,7 +23,7 @@ Cómo podríamos lograr esto?
 
 ## Paradigma 
 
-La programación funcional es un **paradigma de programación** que nos sirve para estructurar, organizar y controlar la complejidad de nuestro código, favoreciendo un estilo más [**_declarativo_**]()_, utilizando expresiones y [**_funciones puras_**]() para construir aplicaciones, evitando los [**_side effects_**]() y la mutación del [**_estado**](), logrando así que el código resulte...
+La programación funcional es un **paradigma de programación** que nos sirve para estructurar, organizar y controlar la complejidad de nuestro código, favoreciendo un estilo más [**_declarativo_**](https://github.com/undefinedschool/notes-fp-js#declarativo-vs-imperativo)_, utilizando expresiones y [**_funciones puras_**](https://github.com/undefinedschool/notes-fp-js#funciones-puras) para construir aplicaciones, evitando los [**_side effects_**](https://github.com/undefinedschool/notes-fp-js#side-effects) y la mutación del [**_estado**](https://github.com/undefinedschool/notes-fp-js#estado-compartido), logrando así que el código resulte...
 
 ➕ legible    
 ➕ declarativo  
@@ -43,7 +43,7 @@ Para esto, vamos a utilizar
 - sin _side effects_: no hay consecuencias más allá del scope de la función y su output
 - composición: construimos nuestra aplicación a partir de estos bloques
 
-Usar [_funciones puras_]() y [_componerlas_]() para resolver problemas más grandes son habilidades muy útiles que pueden ser utilizadas para simplificar esta complejidad.
+Usar [_funciones puras_](https://github.com/undefinedschool/notes-fp-js#funciones-puras) y [_componerlas_](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) para resolver problemas más grandes son habilidades muy útiles que pueden ser utilizadas para simplificar esta complejidad.
 
 👉 Tengamos en cuenta que **simple no significa _fácil_**: los problemas difíciles lo seguirán siendo, el paradigma funcional no va a cambiar esto, **la simplificación viene dada porque los problemas resultan más fáciles de razonar, al descomponerlos en subproblemas**. Estos problemas son mucho más sencillos de resolver de forma independiente y pueden componerse para llegar a la solución buscada.
 
@@ -114,7 +114,7 @@ Algunos métodos de `Array`, como [`map()`](https://developer.mozilla.org/en-US/
 [![Higher-order functions - Part 1 of Functional Programming in JavaScript](https://img.youtube.com/vi/BMUiFMZr7vk/0.jpg)](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 > Ver [Higher-order functions - Part 1 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 
-Esta característica es la que nos va a permitir luego [componer]() funciones.
+Esta característica es la que nos va a permitir luego [componer](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) funciones.
 
 ### Declarativo vs Imperativo
 
@@ -126,7 +126,7 @@ Algunos lenguajes declarativos que ya conocemos y venimos utilizando son HTML y 
 
 ### Side Effects
 
-Decimos que una expresión o función tiene un _side effect_ si, aparte de retornar un valor, interactúa de alguna forma (lee o escribe) con un [**_estado_**]() externo a la misma (es decir, cualquier otra cosa que haga aparte de retornar un valor). Por ejemplo, leer o modificar una variable global son considerados side effects.
+Decimos que una expresión o función tiene un _side effect_ si, aparte de retornar un valor, interactúa de alguna forma (lee o escribe) con un [**_estado_**](https://github.com/undefinedschool/notes-fp-js#estado-compartido) externo a la misma (es decir, cualquier otra cosa que haga aparte de retornar un valor). Por ejemplo, leer o modificar una variable global son considerados side effects.
 
 ```js
 const differentEveryTime = new Date();
@@ -148,7 +148,7 @@ Los _side effects_ incluyen:
 - modificar el DOM
 - mutar objetos/arrays pasados como argumentos
 
-El paradigma funcional utiliza [funciones puras]() y datos [inmutables]() para evitar los _side-effects_.
+El paradigma funcional utiliza [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) y datos [inmutables](https://github.com/undefinedschool/notes-fp-js#inmutabilidad) para evitar los _side-effects_.
 
 ### Estado compartido
 
@@ -160,11 +160,11 @@ Podemos tener estado compartido en
 - Variables globales
 - Argumentos pasados por referencia (objetos)
 
-Las funciones limitan los cambios realizados al estado del programa, evitando acceder a variables globales, reduciendo así los posibles [_side-effects_](). Es por esta razón que usamos [funciones puras]() en el paradigma funcional.
+Las funciones limitan los cambios realizados al estado del programa, evitando acceder a variables globales, reduciendo así los posibles [_side-effects_](https://github.com/undefinedschool/notes-fp-js#side-effects). Es por esta razón que usamos [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) en el paradigma funcional.
 
 ### Inmutabilidad
 
-Decimos que **los datos son _inmutables_ si nunca cambian (no pueden modificarse)**. En el paradigma funcional, los datos son inmutables. Utilizar valores inmutables facilita mucho razonar sobre el código de nuestra aplicación, ya que no modificaremos accidentalmente el [estado]() de la misma, por lo que es recomendable aplicar esta característica del paradigma siempre que podamos.
+Decimos que **los datos son _inmutables_ si nunca cambian (no pueden modificarse)**. En el paradigma funcional, los datos son inmutables. Utilizar valores inmutables facilita mucho razonar sobre el código de nuestra aplicación, ya que no modificaremos accidentalmente el [estado](https://github.com/undefinedschool/notes-fp-js#estado-compartido) de la misma, por lo que es recomendable aplicar esta característica del paradigma siempre que podamos.
 
 Las _variables_ entonces, pasan a ser _constantes_, no pueden modificarse: una vez creada una variable con cierto valor, la única forma que tenemos de modificar el mismo es creando una nueva variable con el nuevo valor. 
 
@@ -190,7 +190,7 @@ cantModifyThis = 2;
 // ❌ Uncaught TypeError: Assignment to constant variable.
 ```
 
-En cambio, si estamos utilizando objetos, tengamos en cuenta que **en JavaScript, los objetos siempre se pasan por _referencia_**, es decir, si una función muta/modifica un objeto que recibe como argumento, está mutando un [estado externo]() fuera de su _scope_. Los [_tipos primitivos_](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) en cambio, se pasan por valor/copia.
+En cambio, si estamos utilizando objetos, tengamos en cuenta que **en JavaScript, los objetos siempre se pasan por _referencia_**, es decir, si una función muta/modifica un objeto que recibe como argumento, está mutando un [estado externo](https://github.com/undefinedschool/notes-fp-js#estado-compartido) fuera de su _scope_. Los [_tipos primitivos_](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) en cambio, se pasan por valor/copia.
 
 Usar `const` en el caso de un objeto, solo impide la _reasignación_, es decir, una vez definida la variable, no podemos cambiar a qué objeto hace referencia usando el operador de asignación `=`. Pero nada nos impide modificar el objeto internamente, modificar los valores de sus propiedades/métodos o incluso agregar/eliminar alguna.
 
@@ -240,10 +240,10 @@ Decimos que una función es _pura_ si
 
 - el valor de retorno está determinado únicamente por su input (mismo input => mismo output), sin importar cuántas veces la llamemos<sup id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> 
 - es _predecible_ (por el ítem anterior)
-- no modifica ningún estado interno (argumentos) ni interactúa con ningún estado externo (no leen ni modifican valores fuera de su _scope_), es decir, no provocan [_side effects_]()
-- son [_referencialmente transparentes_]().
+- no modifica ningún estado interno (argumentos) ni interactúa con ningún estado externo (no leen ni modifican valores fuera de su _scope_), es decir, no provocan [_side effects_](https://github.com/undefinedschool/notes-fp-js#side-effects)
+- son [_referencialmente transparentes_](https://github.com/undefinedschool/notes-fp-js#transparencia-referencial).
 
-Es decir, dado el mismo input, retorna siempre el mismo output (es determinística). Esto hace que las funciones sean _auto-contenidas_, y _predecibles_ facilitando la [composición]() y el testeo de las mismas.
+Es decir, dado el mismo input, retorna siempre el mismo output (es determinística). Esto hace que las funciones sean _auto-contenidas_, y _predecibles_ facilitando la [composición](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) y el testeo de las mismas.
 
 Por ejemplo, la siguiente función
 
@@ -419,7 +419,7 @@ pipe(
 )([{name: 'John Bonham', score: 77}]);
 ```
 
-El paradigma de programación funcional utiliza [funciones puras]() como la _unidad primaria de composición_: son los bloques con los que vamos a construir nuestra aplicación.
+El paradigma de programación funcional utiliza [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) como la _unidad primaria de composición_: son los bloques con los que vamos a construir nuestra aplicación.
 
 #### Refactor 1: Compose
 
@@ -553,7 +553,7 @@ Cuando una función se invoca a si misma, se la conoce como _función recursiva_
 
 ### Funciones Puras
 
-Utilizar [funciones puras]() (incluyendo las funciones auxiliares, si las hay) para resolver los siguientes problemas:
+Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) (incluyendo las funciones auxiliares, si las hay) para resolver los siguientes problemas:
 
 1. Agregar un ítem al final de un array, sin modificar el original (no podemos utilizar `push`).
 2. Agregar un ítem al inicio de un array, sin modificar el original (no podemos utilizar `push`).
