@@ -276,12 +276,12 @@ también es _impura_, por las siguientes razones:
 
 #### Ejercicios
 
-1. Cómo afectan las funciones `Array.slice() y `Array.splice()` al array original?
+1. Cómo afectan las funciones `Array.slice()` y `Array.splice()` al array original?
 
-a) `slice` es puro, `splice` es impuro.
-b) `slice` es impuro, `splice` es puro.
-c) ambas son puras.
-d) ambas son impuras.
+a) `slice` es puro, `splice` es impuro.  
+b) `slice` es impuro, `splice` es puro.  
+c) ambas son puras.  
+d) ambas son impuras.  
 
 2. Justificar si `Math.random()` es una función pura o impura.
 3. Justificar cuáles de las siguientes funciones son puras o no:
