@@ -24,7 +24,8 @@
     - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios)
   - [Composición de funciones](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones)
     - [`compose`](https://github.com/undefinedschool/notes-fp-js#compose)
-    - [`pipe` y Pipeline operator](https://github.com/undefinedschool/notes-fp-js#pipe-y-pipeline-operator)
+    - [`pipe`](https://github.com/undefinedschool/notes-fp-js#pipe)
+      - [_Pipeline operator_](https://github.com/undefinedschool/notes-fp-js#pipeline-operator)
     - [Ejercicio](https://github.com/undefinedschool/notes-fp-js#ejercicio)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
@@ -517,13 +518,15 @@ const enhance = compose(f, g, h);
 enhance(number);
 ```
 
+👉 **`compose` aplica la composición leyendo los argumentos** (que en este caso son funciones) **de DERECHA a IZQUIERDA**, ya que se basa en el orden que usamos cuando componemos funciones en matemáticas, es decir, de adentro hacia afuera.
+
 > Ejemplo: función de composición
 
 👉 Este patrón es muy común en la programación funcional y podemos implementarlo utilizando el método [`compose`](https://ramdajs.com/docs/#compose) de la librería utilitaria [Ramda](https://ramdajs.com/)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
-#### `pipe` y Pipeline operator
+#### `pipe`
 
 Además del `compose`, otro patrón muy común en la programación funcional para componer funciones es el `pipe`. Utilizando `reduce`, podemos escribir una _función de composición_ para obtener el mismo resultado.
 
@@ -531,6 +534,8 @@ Además del `compose`, otro patrón muy común en la programación funcional par
 const pipe = (...fns) => 
   x => fns.reduce((acc, fn) => fn(acc), x);
 ```
+
+##### _Pipeline operator_
 
 Existe un operador (_aún en fase experimental_, por lo que necesitamos [Babel](https://alligator.io/js/pipeline-operator/) para poder utilizarlo), el [Pipeline operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator) que permite escribir de forma mucho más legible la composición de funciones, utilizando el output de una expresión como input de la siguiente.
 
@@ -548,7 +553,9 @@ const number = 3;
   |> f;
 ```
 
-👉 [Ver ejemplo en Codepen](https://codepen.io/nhquiroz/pen/xxwVWym)
+[Ver ejemplo en Codepen](https://codepen.io/nhquiroz/pen/xxwVWym)
+
+👉 **`pipe` aplica la composición leyendo los argumentos** (que en este caso son funciones) **de IZQUIERDA a DERECHA**, por lo que el orden en el que le pasemos las funciones será el orden en el que las evalúe.
 
 👉 Este patrón es muy común en la programación funcional y también podemos implementarlo utilizando el método [`pipe`](https://ramdajs.com/0.19.0/docs/#pipe) de la librería utilitaria [Ramda](https://ramdajs.com/)
 
