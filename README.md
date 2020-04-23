@@ -518,9 +518,11 @@ const enhance = compose(f, g, h);
 enhance(number);
 ```
 
+> Ejemplo: función de composición
+
 👉 **`compose` aplica la composición leyendo los argumentos** (que en este caso son funciones) **de DERECHA a IZQUIERDA**, ya que se basa en el orden que usamos cuando componemos funciones en matemáticas, es decir, de adentro hacia afuera.
 
-> Ejemplo: función de composición
+![compose](https://i.imgur.com/Fv87jpw.png)
 
 👉 Este patrón es muy común en la programación funcional y podemos implementarlo utilizando el método [`compose`](https://ramdajs.com/docs/#compose) de la librería utilitaria [Ramda](https://ramdajs.com/)
 
@@ -534,6 +536,12 @@ Además del `compose`, otro patrón muy común en la programación funcional par
 const pipe = (...fns) => 
   x => fns.reduce((acc, fn) => fn(acc), x);
 ```
+
+👉 **`pipe` aplica la composición leyendo los argumentos** (que en este caso son funciones) **de IZQUIERDA a DERECHA**, por lo que el orden en el que le pasemos las funciones será el orden en el que las evalúe.
+
+![pipe](https://i.imgur.com/mE72Zzy.png)
+
+👉 Este patrón es muy común en la programación funcional y también podemos implementarlo utilizando el método [`pipe`](https://ramdajs.com/0.19.0/docs/#pipe) de la librería utilitaria [Ramda](https://ramdajs.com/)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
@@ -555,11 +563,7 @@ const number = 3;
   |> f;
 ```
 
-[Ver ejemplo en Codepen](https://codepen.io/nhquiroz/pen/xxwVWym)
-
-👉 **`pipe` aplica la composición leyendo los argumentos** (que en este caso son funciones) **de IZQUIERDA a DERECHA**, por lo que el orden en el que le pasemos las funciones será el orden en el que las evalúe.
-
-👉 Este patrón es muy común en la programación funcional y también podemos implementarlo utilizando el método [`pipe`](https://ramdajs.com/0.19.0/docs/#pipe) de la librería utilitaria [Ramda](https://ramdajs.com/)
+[Ver ejemplo usando el _Pipeline operator_ en Codepen](https://codepen.io/nhquiroz/pen/xxwVWym)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
