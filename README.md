@@ -418,6 +418,7 @@ pipe(
   createUserTemplate
 )([{name: 'John Bonham', score: 77}]);
 ```
+> Ejemplo usando [`.pipe()`]() de Ramda
 
 El paradigma de programación funcional utiliza [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) como la _unidad primaria de composición_: son los bloques con los que vamos a construir nuestra aplicación.
 
@@ -459,7 +460,14 @@ enhance(number);
 
 👉 Este patrón es muy común en la programación funcional y podemos implementarlo utilizando el método [`compose`](https://ramdajs.com/docs/#compose) de la librería utilitaria [Ramda](https://ramdajs.com/)
 
-##### Refactor 2: Pipeline operator 🙌
+##### Refactor 2: `pipe` y Pipeline operator 🙌
+
+Además del `compose`, otro patrón muy común en la programación funcional para componer funciones es el `pipe`. Utilizando `reduce`, podemos escribir una _función de composición_ para obtener el mismo resultado.
+
+```
+const pipe = (...fns) => 
+  x => fns.reduce((acc, fn) => fn(acc), x);
+```
 
 Existe un operador (_aún en fase experimental_, por lo que necesitamos [Babel](https://alligator.io/js/pipeline-operator/) para poder utilizarlo), el [Pipeline operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator) que permite escribir de forma mucho más legible la composición de funciones, utilizando el output de una expresión como input de la siguiente.
 
