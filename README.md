@@ -452,6 +452,8 @@ arr; // [1, 2, 3, 4, 5]
 
 **La composición consiste en utilizar el resultado de una función (_output_) como argumento (_input_) de otra función**.
 
+Podemos utilizar la composición cuando coinciden la cantidad y el tipo de retorno de una función con el tipo de argumento de otra, es decir, respetamos la [aridad](https://github.com/undefinedschool/notes-fp-js#aridad).
+
 De esta forma, combinando 2 o más funciones simples (funciones que, en lo posible, hagan 1 sola cosa) podemos crear funciones más complejas.
 
 Es el mecanismo que nos provee el paradigma para reutilizar y evitar la duplicación de código (DRY).
