@@ -449,7 +449,7 @@ arr; // [1, 2, 3, 4, 5]
 
 ### Composición de funciones
 
-La composición consiste en simplemente utilizar el resultado de una función (_output_) como _input_ de otra función.
+**La composición consiste en utilizar el resultado de una función (_output_) como argumento (_input_) de otra función**.
 
 De esta forma, combinando 2 o más funciones simples (funciones que, en lo posible, hagan 1 sola cosa) podemos crear funciones más complejas.
 
