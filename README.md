@@ -5,6 +5,35 @@
 
 # ![Notas sobre Programación Funcional con JavaScript](https://i.imgur.com/GxZsZVA.png)
 
+## Contenido
+
+- [Intro](https://github.com/undefinedschool/notes-fp-js#intro)
+- [Paradigma](https://github.com/undefinedschool/notes-fp-js#paradigma)
+- [Conceptos](https://github.com/undefinedschool/notes-fp-js#conceptos)
+  - [Función](https://github.com/undefinedschool/notes-fp-js#funci%C3%B3n)
+  - [Aridad](https://github.com/undefinedschool/notes-fp-js#aridad)
+  - [Transparencia referencial](https://github.com/undefinedschool/notes-fp-js#transparencia-referencial)
+  - [Funciones _First-Class_](https://github.com/undefinedschool/notes-fp-js#funciones-first-class)
+  - [Higher-Order Functions](https://github.com/undefinedschool/notes-fp-js#higher-order-functions)
+  - [Declarativo vs Imperativo](https://github.com/undefinedschool/notes-fp-js#declarativo-vs-imperativo)
+  - [_Side Effects_](https://github.com/undefinedschool/notes-fp-js#side-effects)
+  - [Estado compartido](https://github.com/undefinedschool/notes-fp-js#estado-compartido)
+  - [Inmutabilidad](https://github.com/undefinedschool/notes-fp-js#inmutabilidad)
+    - [Inmutabilidad, `const` y objetos en JS](https://github.com/undefinedschool/notes-fp-js#inmutabilidad-const-y-objetos-en-js)
+  - [Funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras)
+    - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios)
+  - [Composición de funciones](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones)
+    - [`compose`]()
+    - [`pipe` y Pipeline operator]()
+    - [Ejercicio]()
+  - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
+  - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
+- [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
+  - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
+- [Lecturas Recomendadas]()
+
+---
+
 ## Intro 
 
 A medida que la cantidad de líneas del código de nuestra aplicación va aumentando, debemos tener cuidado al hacer cambios y pensar a qué otras partes del código estamos afectando.
@@ -85,6 +114,8 @@ En el ejemplo anterior, `sum` es una función _binaria_ o una función con una a
 
 También existen las funciones _variádicas_: son aquellas que pueden recibir una cantidad variable de argumentos.
 
+👉 **Es importante respetar la aridad de las funciones cuando estamos [componiendo]()**
+
 ### Transparencia referencial
 
 Decimos que una expresión es _referencialmente transparente_ si puede ser reemplazada por su valor, sin alterar el comportamiento del programa.
@@ -114,7 +145,7 @@ Algunos métodos de `Array`, como [`map()`](https://developer.mozilla.org/en-US/
 [![Higher-order functions - Part 1 of Functional Programming in JavaScript](https://img.youtube.com/vi/BMUiFMZr7vk/0.jpg)](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 > Ver [Higher-order functions - Part 1 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 
-Esta característica es la que nos va a permitir luego [componer](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) funciones.
+👉 **Esta característica es la que nos va a permitir luego [componer](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) funciones.**
 
 ### Declarativo vs Imperativo
 
@@ -422,7 +453,7 @@ pipe(
 
 El paradigma de programación funcional utiliza [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) como la _unidad primaria de composición_: son los bloques con los que vamos a construir nuestra aplicación.
 
-#### Refactor 1: Compose
+#### `compose`
 
 Miremos el ejemplo anterior y pensemos qué pasaría si tuviéramos que componer muchas funciones...
 
@@ -460,7 +491,7 @@ enhance(number);
 
 👉 Este patrón es muy común en la programación funcional y podemos implementarlo utilizando el método [`compose`](https://ramdajs.com/docs/#compose) de la librería utilitaria [Ramda](https://ramdajs.com/)
 
-##### Refactor 2: `pipe` y Pipeline operator 🙌
+#### `pipe` y Pipeline operator
 
 Además del `compose`, otro patrón muy común en la programación funcional para componer funciones es el `pipe`. Utilizando `reduce`, podemos escribir una _función de composición_ para obtener el mismo resultado.
 
@@ -547,15 +578,15 @@ str
 
 </details>
 
+### Closures
+
+[WIP]
+
 ### Recursión
 
 [WIP]
 
 Cuando una función se invoca a si misma, se la conoce como _función recursiva_.
-
-### Closures
-
-[WIP]
 
 ## Ejercicios
 
@@ -574,7 +605,10 @@ Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funcio
 9. Implementar la función `map()` de `Array` usando `reduce()`.
 10. Implementar la función `filter()` de `Array` usando `reduce()`.
 
-## Lectura recomendada: [Functional-Light JS - Kyle Simpson](https://github.com/getify/Functional-Light-JS)
+## Lecturas recomendadas: 
+
+- [Functional-Light JS - Kyle Simpson](https://github.com/getify/Functional-Light-JS) (empezar por acá!)
+- [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/)
 
 ---
 
