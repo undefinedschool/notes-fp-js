@@ -75,6 +75,8 @@ Para esto, vamos a utilizar
 - sin _side effects_: no hay consecuencias más allá del scope de la función y su output
 - composición: construimos nuestra aplicación a partir de estos bloques
 
+Nuestra aplicación estará definida en términos de una función principal. La función principal se define a partir de otras funciones, que a su vez se definen a partir de otras funciones, etc, hasta llegar a valores de tipos primitivos como `number` o `string`.
+
 Usar [_funciones puras_](https://github.com/undefinedschool/notes-fp-js#funciones-puras) y [_componerlas_](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) para resolver problemas más grandes son habilidades muy útiles que pueden ser utilizadas para simplificar esta complejidad.
 
 👉 Tengamos en cuenta que **simple no significa _fácil_**: los problemas difíciles lo seguirán siendo, el paradigma funcional no va a cambiar esto, **la simplificación viene dada porque los problemas resultan más fáciles de razonar, al descomponerlos en subproblemas**. Estos problemas son mucho más sencillos de resolver de forma independiente y pueden componerse para llegar a la solución buscada.
@@ -96,6 +98,13 @@ Utilizamos funciones principalmente para:
 - _mappear_ inputs a determinados outputs: una función recibe argumentos y retorna un valor, por lo que para cada input existe un output
 - procedimientos: una función puede invocarse para ejecutar una secuencia de instrucciones, conocida como procedimiento
 - I/O: una función puede comunicarse con otras partes del sistema/periféricos (requests HTTP, interacción con una DB, obtener input a través de la terminal, etc)
+
+En el paradigma funcional, las funciones cumplen con las siguientes características:
+
+- Son [puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras)
+- Usan [datos inmutables](https://github.com/undefinedschool/notes-fp-js#inmutabilidad)
+- Tienen [transparencia referencial](https://github.com/undefinedschool/notes-fp-js#transparencia-referencial)
+- Son de [primera clase](https://github.com/undefinedschool/notes-fp-js#funciones-first-class)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
@@ -450,7 +459,9 @@ arr; // [1, 2, 3, 4, 5]
 
 ### Composición de funciones
 
-**La composición consiste en utilizar el resultado de una función (_output_) como argumento (_input_) de otra función**.
+El rol de una función es tomar un valor inicial y transformarlo en otro. La composición nos permite combinar funciones, para que podamos aplicar una serie de transformaciones hasta alcanzar un valor final.
+
+**La composición consiste entonces en utilizar el resultado de una función (_output_) como argumento (_input_) de otra función**.
 
 Podemos utilizar la composición cuando coinciden la cantidad y el tipo de retorno de una función con el tipo de argumento de otra, es decir, respetamos la [aridad](https://github.com/undefinedschool/notes-fp-js#aridad).
 
@@ -480,9 +491,15 @@ pipe(
   createUserTemplate
 )([{name: 'John Bonham', score: 77}]);
 ```
-> Ejemplo: usando [`.pipe()`]() de Ramda
+
+> Ejemplo: usando `pipe()`
 
 El paradigma de programación funcional utiliza [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) como la _unidad primaria de composición_: son los bloques con los que vamos a construir nuestra aplicación.
+
+Para facilitar la composición, es recomendable que las funciones que utilicemos...
+
+- tengan un propósito bien definido, es decir, hagan 1 sola cosa
+- sean lo suficientemente genéricas
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
@@ -659,6 +676,23 @@ Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funcio
 8. Chequear si una palabra es _palíndromo_<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 9. Implementar la función `map()` de `Array` usando `reduce()`.
 10. Implementar la función `filter()` de `Array` usando `reduce()`.
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
+### Composición de Funciones
+
+1. El siguiente código calcula el costo de comprar algo online. Reescribirlo, utilizando composición de funciones puras. Para componer, vamos a utilizar [`compose`](https://ramdajs.com/docs/#compose) y [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/) (implementar 2 versiones)
+
+```js
+const ITEM_PRICE = 10;
+
+// tax (6%) + shipping (10)
+const calculateTotal = (baseCost) => (1.06 * baseCost) + 10;
+  
+calculateTotal(ITEM_PRICE);
+```
+
+2. Agregar al ítem anterior la función `applySaleDiscount: (number, number) -> number`, que recibe un costo inicial y un porcentaje de descuento y retorna el valor final con el descuento aplicado. Componer esta función utilizando `pipe`, para calcular el costo de una compra online con un 10% de descuento.
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
