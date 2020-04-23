@@ -14,7 +14,7 @@
   - [Aridad](https://github.com/undefinedschool/notes-fp-js#aridad)
   - [Transparencia referencial](https://github.com/undefinedschool/notes-fp-js#transparencia-referencial)
   - [Funciones _First-Class_](https://github.com/undefinedschool/notes-fp-js#funciones-first-class)
-  - [Higher-Order Functions](https://github.com/undefinedschool/notes-fp-js#higher-order-functions)
+  - [_Higher-Order Functions_](https://github.com/undefinedschool/notes-fp-js#higher-order-functions)
   - [Declarativo vs Imperativo](https://github.com/undefinedschool/notes-fp-js#declarativo-vs-imperativo)
   - [_Side Effects_](https://github.com/undefinedschool/notes-fp-js#side-effects)
   - [Estado compartido](https://github.com/undefinedschool/notes-fp-js#estado-compartido)
@@ -23,14 +23,14 @@
   - [Funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras)
     - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios)
   - [Composición de funciones](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones)
-    - [`compose`]()
-    - [`pipe` y Pipeline operator]()
-    - [Ejercicio]()
+    - [`compose`](https://github.com/undefinedschool/notes-fp-js#compose)
+    - [`pipe` y Pipeline operator](https://github.com/undefinedschool/notes-fp-js#pipe-y-pipeline-operator)
+    - [Ejercicio](https://github.com/undefinedschool/notes-fp-js#ejercicio)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
-- [Lecturas Recomendadas]()
+- [Lecturas Recomendadas](https://github.com/undefinedschool/notes-fp-js#lecturas-recomendadas)
 
 ---
 
@@ -49,6 +49,8 @@ Imaginemos que podemos estructurar nuestro código en pequeñas piezas, individu
 - cada una de estas piezas de código es declarativa, haciéndola más legible
 
 Cómo podríamos lograr esto?
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 ## Paradigma 
 
@@ -78,6 +80,8 @@ Usar [_funciones puras_](https://github.com/undefinedschool/notes-fp-js#funcione
 
 > JavaScript no es un lenguaje de programación funcional _puro_, pero tiene soporte para algunas características del paradigma. Existen lenguajes funcionales puros que compilan a JavaScript (y pueden utilizarse en frontend), como [Elm](https://elm-lang.org/) y [PureScript](https://www.purescript.org/)
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ## Conceptos
 
 ### Función
@@ -91,6 +95,8 @@ Utilizamos funciones principalmente para:
 - _mappear_ inputs a determinados outputs: una función recibe argumentos y retorna un valor, por lo que para cada input existe un output
 - procedimientos: una función puede invocarse para ejecutar una secuencia de instrucciones, conocida como procedimiento
 - I/O: una función puede comunicarse con otras partes del sistema/periféricos (requests HTTP, interacción con una DB, obtener input a través de la terminal, etc)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 ### Aridad
 
@@ -116,6 +122,8 @@ También existen las funciones _variádicas_: son aquellas que pueden recibir un
 
 👉 **Es importante respetar la aridad de las funciones cuando estamos [componiendo]()**
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ### Transparencia referencial
 
 Decimos que una expresión es _referencialmente transparente_ si puede ser reemplazada por su valor, sin alterar el comportamiento del programa.
@@ -128,11 +136,15 @@ const greet = () => 'Hello World!';
 
 cualquier invocación de `greet()` puede ser reemplazada por el string `'Hello World!'` perfectamente, por lo tanto tiene transparencia referencial.
 
-### Funciones First-Class
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
+### Funciones _First-Class_
 
 En un lenguaje de programación funcional, las funciones son [**_First-Class Citizens_**](https://github.com/undefinedschool/notes-functions-first-class) (es decir, pueden tratarse como cualquier otro valor) y JavaScript cumple con esto.
 
-### Higher-Order Functions
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
+### _Higher-Order Functions_
 
 Si una función acepta otras funciones como argumentos (por ejemplo, cada vez que usamos _callbacks_ en JS/Node) o retorna funciones, se dice que es una **_función de alto orden o Higher-Order Function_** (alcanza con que cumpla alguna de las 2 características).
 
@@ -147,6 +159,8 @@ Algunos métodos de `Array`, como [`map()`](https://developer.mozilla.org/en-US/
 
 👉 **Esta característica es la que nos va a permitir luego [componer](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) funciones.**
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ### Declarativo vs Imperativo
 
 Cuando utilizamos un enfoque _imperativo_, definimos todos los pasos necesarios para cumplir cierta tarea. **Con un enfoque _declarativo_ en cambio, le decimos a la computadora qué hacer y que la misma se encargue de resolver los detalles**, abstrayéndonos de estos. Notemos que podemos manejar diferentes **niveles de abstracción**: JavaScript por si mismo ya es mucho más declarativo que el código máquina que termina produciendo el compilador/intérprete.
@@ -155,7 +169,9 @@ Por ejemplo, cuando estamos iterando arrays, el enfoque más imperativo sería u
 
 Algunos lenguajes declarativos que ya conocemos y venimos utilizando son HTML y SQL.
 
-### Side Effects
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
+### _Side Effects_
 
 Decimos que una expresión o función tiene un _side effect_ si, aparte de retornar un valor, interactúa de alguna forma (lee o escribe) con un [**_estado_**](https://github.com/undefinedschool/notes-fp-js#estado-compartido) externo a la misma (es decir, cualquier otra cosa que haga aparte de retornar un valor). Por ejemplo, leer o modificar una variable global son considerados side effects.
 
@@ -181,6 +197,8 @@ Los _side effects_ incluyen:
 
 El paradigma funcional utiliza [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) y datos [inmutables](https://github.com/undefinedschool/notes-fp-js#inmutabilidad) para evitar los _side-effects_.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ### Estado compartido
 
 Tener estado (variables) compartido hace que nuestra aplicación se vuelva más frágil (_error-prone_), difícil de razonar y eventualmente, de debuggear, ya que puede haber otras partes del código, módulos o incluso código externo, como dependencias u otro software que use nuestra aplicación, que puedan estar modificando este estado, volviendo más complejo el seguimiento de la evolución del mismo.
@@ -192,6 +210,8 @@ Podemos tener estado compartido en
 - Argumentos pasados por referencia (objetos)
 
 Las funciones limitan los cambios realizados al estado del programa, evitando acceder a variables globales, reduciendo así los posibles [_side-effects_](https://github.com/undefinedschool/notes-fp-js#side-effects). Es por esta razón que usamos [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) en el paradigma funcional.
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 ### Inmutabilidad
 
@@ -206,9 +226,11 @@ const originalArray = [1, 2, 3];
 const newArray = [...originalArray, 4];
 ```
 
-> Ejemplo 1: agregar un ítem a un array sin modificar el original, utilizando [`spread operator`](https://github.com/undefinedschool/notes-es6-spread-operator)
+> Ejemplo: agregar un ítem a un array sin modificar el original, utilizando [`spread operator`](https://github.com/undefinedschool/notes-es6-spread-operator)
 
 👉 **La única forma de modificar datos es creando copias modificadas**
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 #### Inmutabilidad, `const` y objetos en JS
 
@@ -265,6 +287,8 @@ console.log(original);
 console.log(modifiedCopy);
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ### Funciones puras
 
 Decimos que una función es _pura_ si 
@@ -304,6 +328,8 @@ también es _impura_, por las siguientes razones:
 
 - está accediendo a una variable por fuera de su _scope_
 - crea un _side-effect_ al modificar una variable externa
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 #### Ejercicios
 
@@ -419,6 +445,8 @@ addToArr(arr, 5);
 arr; // [1, 2, 3, 4, 5]
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ### Composición de funciones
 
 La composición consiste en simplemente utilizar el resultado de una función (_output_) como _input_ de otra función.
@@ -436,7 +464,7 @@ const number = 3;
 const result = f(g(h(number)));
 ```
 
-> Ejemplo 2: composición de funciones
+> Ejemplo: composición de funciones usando la sintaxis matemática
 
 Podemos pensar también a la composición de funciones como el hecho de ejecutar una serie de operaciones para resolver un problema más complejo.
 
@@ -449,9 +477,11 @@ pipe(
   createUserTemplate
 )([{name: 'John Bonham', score: 77}]);
 ```
-> Ejemplo usando [`.pipe()`]() de Ramda
+> Ejemplo: usando [`.pipe()`]() de Ramda
 
 El paradigma de programación funcional utiliza [funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras) como la _unidad primaria de composición_: son los bloques con los que vamos a construir nuestra aplicación.
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 #### `compose`
 
@@ -487,15 +517,17 @@ const enhance = compose(f, g, h);
 enhance(number);
 ```
 
-> Ejemplo 3: función de composición
+> Ejemplo: función de composición
 
 👉 Este patrón es muy común en la programación funcional y podemos implementarlo utilizando el método [`compose`](https://ramdajs.com/docs/#compose) de la librería utilitaria [Ramda](https://ramdajs.com/)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 #### `pipe` y Pipeline operator
 
 Además del `compose`, otro patrón muy común en la programación funcional para componer funciones es el `pipe`. Utilizando `reduce`, podemos escribir una _función de composición_ para obtener el mismo resultado.
 
-```
+```js
 const pipe = (...fns) => 
   x => fns.reduce((acc, fn) => fn(acc), x);
 ```
@@ -519,6 +551,8 @@ const number = 3;
 👉 [Ver ejemplo en Codepen](https://codepen.io/nhquiroz/pen/xxwVWym)
 
 👉 Este patrón es muy común en la programación funcional y también podemos implementarlo utilizando el método [`pipe`](https://ramdajs.com/0.19.0/docs/#pipe) de la librería utilitaria [Ramda](https://ramdajs.com/)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 #### Ejercicio
 
@@ -578,15 +612,21 @@ str
 
 </details>
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ### Closures
 
 [WIP]
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 ### Recursión
 
 [WIP]
 
 Cuando una función se invoca a si misma, se la conoce como _función recursiva_.
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 ## Ejercicios
 
@@ -605,10 +645,14 @@ Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funcio
 9. Implementar la función `map()` de `Array` usando `reduce()`.
 10. Implementar la función `filter()` de `Array` usando `reduce()`.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ## Lecturas recomendadas: 
 
-- [Functional-Light JS - Kyle Simpson](https://github.com/getify/Functional-Light-JS) (empezar por acá!)
+- [⭐ Functional-Light JS - Kyle Simpson](https://github.com/getify/Functional-Light-JS) (**empezar por acá!**)
 - [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 ---
 
