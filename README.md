@@ -464,7 +464,7 @@ const number = 3;
 const result = f(g(h(number)));
 ```
 
-> Ejemplo: composición de funciones usando la sintaxis matemática
+> Ejemplo: composición de funciones usando la notación matemática
 
 Podemos pensar también a la composición de funciones como el hecho de ejecutar una serie de operaciones para resolver un problema más complejo.
 
