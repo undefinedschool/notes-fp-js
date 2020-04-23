@@ -535,6 +535,8 @@ const pipe = (...fns) =>
   x => fns.reduce((acc, fn) => fn(acc), x);
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
 ##### _Pipeline operator_
 
 Existe un operador (_aún en fase experimental_, por lo que necesitamos [Babel](https://alligator.io/js/pipeline-operator/) para poder utilizarlo), el [Pipeline operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator) que permite escribir de forma mucho más legible la composición de funciones, utilizando el output de una expresión como input de la siguiente.
