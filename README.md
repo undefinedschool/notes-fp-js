@@ -702,6 +702,22 @@ const copyArrayAndDivideBy2 = array => {
   
   return output;
 }
+
+const copyArrayAndAdd2 = array => {
+  const output = [];
+  
+  for (const elem of array) {
+    output.push(elem + 2);
+  }
+  
+  return output;
+}
+
+const arr = [1, 2, 3];
+
+copyArrayAndMultiplyBy2(arr);
+copyArrayAndDivideBy2(arr);
+copyArrayAndAdd2(arr);
 ```
 
 ### Composición de Funciones
