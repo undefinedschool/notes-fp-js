@@ -158,16 +158,15 @@ En un lenguaje de programación funcional, las funciones son [**_First-Class Cit
 
 Si una función acepta otras funciones como argumentos (por ejemplo, cada vez que usamos _callbacks_ en JS/Node) o retorna funciones, se dice que es una **_función de alto orden o Higher-Order Function_** (alcanza con que cumpla alguna de las 2 características).
 
-👉 Tener en cuenta que _las funciones de alto orden son un subconjunto de las funciones de primera clase_, por lo tanto 
-
-![First-Class Function_→ Higher-Order Function](https://i.imgur.com/RswMneW.png)
-
 Algunos métodos de `Array`, como [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) y [`reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) son funciones de alto orden.
 
 [![Higher-order functions - Part 1 of Functional Programming in JavaScript](https://img.youtube.com/vi/BMUiFMZr7vk/0.jpg)](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 > Ver [Higher-order functions - Part 1 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 
-👉 **Esta característica es la que nos va a permitir luego [componer](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) funciones.**
+👉 **Esta característica es la que nos va a permitir...**
+
+- [componer](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) funciones.**
+- generalizar funciones, al poder pasar funciones por parámetro (pensar por ejemplo en lo que hacen `map`, `filter` y `reduce`)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
