@@ -275,7 +275,7 @@ console.log(mutableData);
 
 👉 **Para evitar _mutar_ el estado, es importante tratar el input de las funciones como inmutable.**<sup id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 
-> Si queremos trabajar con objetos _inmutables_ podemos utilizar el método [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) o la librería [Immer.js](https://immerjs.github.io/immer/)
+> Si queremos trabajar con objetos _inmutables_ podemos utilizar el método [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)<sup id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> o la librería [Immer.js](https://immerjs.github.io/immer/)
 
 > En el paradigma funcional, nunca deberíamos modificar un objeto directamente, sino crear uno nuevo con los cambios necesarios, a partir del original. 
 
@@ -710,3 +710,5 @@ calculateTotal(ITEM_PRICE);
 <sup id="cite_note-2"><a href="#cite_ref-2">2</a></sup> Se conoce como _mutator_ a los métodos/funciones que modifican los objetos recibidos como argumentos, y _accesor_ a las funciones que retornan un nuevo valor, basado en el input.
 
 <sup id="cite_note-3"><a href="#cite_ref-3">3</a></sup> Un palíndromo es una palabra o frase que se lee igual para adelante y para atrás.
+
+<sup id="cite_note-4"><a href="#cite_ref-4">4</a></sup> Tener en cuenta que `Object.freeze()` funciona a nivel [_shallow_](https://dev.to/krsgrnt/safely-copying-nested-objects-in-javascript-5fpi), es decir, sólo congela el primer nivel y no los objetos anidados, que siguen siendo referencias.
