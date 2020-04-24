@@ -275,7 +275,7 @@ console.log(mutableData);
 
 👉 **Para evitar _mutar_ el estado, es importante tratar el input de las funciones como inmutable.**<sup id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
 
-> Si queremos trabajar con objetos _inmutables_ podemos utilizar el método [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) o la librería [Immutable.js](https://immutable-js.github.io/immutable-js/)
+> Si queremos trabajar con objetos _inmutables_ podemos utilizar el método [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) o la librería [Immer.js](https://immerjs.github.io/immer/)
 
 > En el paradigma funcional, nunca deberíamos modificar un objeto directamente, sino crear uno nuevo con los cambios necesarios, a partir del original. 
 
