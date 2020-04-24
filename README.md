@@ -62,7 +62,7 @@ La programación funcional es un **paradigma de programación** que nos sirve pa
 ➕ simple (sólo tenemos valores y funciones)     
 ➕ fácil de razonar  
 ➕ fácil de debuggear (cada función es una unidad con input/output definido)   
-➕ fácil de testear  
+➕ [fácil de testear](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/)  
 ➕ fácil de extender (podemos agregar funcionalidades combinando otras ya existentes)   
 ➕ fácil de refactorizar (nuevamente, sólo tenemos valores y funciones)   
 ➕ performance, si paralelizamos la ejecución de código      
