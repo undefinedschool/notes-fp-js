@@ -679,6 +679,32 @@ Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funcio
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
+### Higher-Order Functions
+
+1. Dado el siguiente código, qué problemas encontramos en el mismo? Cómo podemos mejorarlo/refactorizarlo? (usar siempre _funciones puras_)
+
+```js
+const copyArrayAndMultiplyBy2 = array => {
+  const output = [];
+  
+  for (const elem of array) {
+    output.push(elem * 2);
+  }
+  
+  return output;
+}
+
+const copyArrayAndDivideBy2 = array => {
+  const output = [];
+  
+  for (const elem of array) {
+    output.push(elem / 2);
+  }
+  
+  return output;
+}
+```
+
 ### Composición de Funciones
 
 1. El siguiente código calcula el costo de comprar algo online. Reescribirlo, utilizando composición de funciones puras. Para componer, vamos a utilizar [`compose`](https://ramdajs.com/docs/#compose) y [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/) (implementar 2 versiones)
