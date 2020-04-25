@@ -728,7 +728,7 @@ copyArrayAndDivideBy2(arr);
 copyArrayAndAdd2(arr);
 ```
 
-2. Implementar la función `capitalize: string -> string`, que recibe un texto y devuelve el mismo con todas sus palabras teniendo la primer letra en mayúscula. 
+2. Implementar la función `capitalize: string -> string`, que recibe un texto y devuelve el mismo con todas sus palabras teniendo la primer letra en mayúscula.
 
 Ejemplo:
 
@@ -736,7 +736,9 @@ Ejemplo:
 
 ### Composición de Funciones
 
-1. El siguiente código calcula el costo de comprar algo online. Reescribirlo, utilizando composición de funciones puras. Para componer, vamos a utilizar [`compose`](https://ramdajs.com/docs/#compose) y [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/) (implementar 2 versiones)
+1. Descomponer la función `capitalize` del ejercicio anterior en pequeñas funciones (puras) que hagan 1 cosa y componerlas utilizando [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/).
+
+2. El siguiente código calcula el costo de comprar algo online. Reescribirlo, utilizando composición de funciones puras. Para componer, vamos a utilizar [`compose`](https://ramdajs.com/docs/#compose) y [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/) (implementar las 2 versiones)
 
 ```js
 const ITEM_PRICE = 10;
@@ -747,7 +749,7 @@ const calculateTotal = (baseCost) => (1.06 * baseCost) + 10;
 calculateTotal(ITEM_PRICE);
 ```
 
-2. Agregar al ítem anterior la función `applySaleDiscount: (number, number) -> number`, que recibe un costo inicial y un porcentaje de descuento y retorna el valor final con el descuento aplicado. Componer esta función utilizando `pipe`, para calcular el costo de una compra online con un 10% de descuento.
+3. Agregar al ítem anterior la función `applySaleDiscount: (number, number) -> number`, que recibe un costo inicial y un porcentaje de descuento y retorna el valor final con el descuento aplicado. Componer esta función utilizando `pipe`, para calcular el costo de una compra online con un 10% de descuento.
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
