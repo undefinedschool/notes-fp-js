@@ -27,6 +27,7 @@
     - [`pipe`](https://github.com/undefinedschool/notes-fp-js#pipe)
       - [_Pipeline operator_](https://github.com/undefinedschool/notes-fp-js#pipeline-operator)
     - [Ejercicio](https://github.com/undefinedschool/notes-fp-js#ejercicio)
+  - [_Point-Free Style_](https://github.com/undefinedschool/notes-fp-js#point-free-style)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
@@ -557,7 +558,7 @@ const pipe = (...fns) =>
   x => fns.reduce((acc, fn) => fn(acc), x);
 ```
 
-👉 **`pipe` aplica la composición leyendo los argumentos** (que en este caso son funciones) **de IZQUIERDA a DERECHA**, por lo que el orden en el que le pasemos las funciones será el orden en el que las evalúe. **Conviene utilizarlo cuando resulta más natural pensar la composición como una serie de tareas a ejecutar a partir de un valor inicial.**
+👉 **`pipe` aplica la composición leyendo los argumentos** (que en este caso son funciones) **de IZQUIERDA a DERECHA**, por lo que el orden en el que le pasemos las funciones será el orden en el que las evalúe. **Conviene utilizarlo cuando resulta más natural pensar la composición como una serie de tareas a ejecutar a partir de un valor inicial.** Resulta muy útil, por ejemplo, para eliminar el uso de variables intermedias que sólo existen con el fin de almacenar valores temporales entre una operación y la siguiente.
 
 ![pipe](https://i.imgur.com/mE72Zzy.png)
 
@@ -646,6 +647,25 @@ str
 </details>
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
+### _Point-Free Style_
+
+En la programación imperativa, cuando realizamos algún tipo de operación sobre alguna variable, siempre vamos a encontrar referencias a la misma en cada paso.
+
+En el paradigma funcional en cambio (y en JavaScript), muchas veces es frecuente operar con argumentos implícitos, es decir, que no están identificados. Por ejemplo, en el siguiente código
+
+```js
+const toSlug = pipe(
+  split(' '),
+  map(toLowerCase),
+  join('-'),
+  encodeURIComponent
+);
+
+console.log(toSlug('JS rlz'));
+```
+
+`pipe()` tiene un parámetro implícito (el string). Esta forma de escribir las funciones se conoce como _Point-Free_.
 
 ### Closures
 
