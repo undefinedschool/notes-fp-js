@@ -672,9 +672,17 @@ Utilizar [funciones puras](https://github.com/undefinedschool/notes-fp-js#funcio
 5. Eliminar los duplicados de un array, utilizando `Array.filter()`.
 6. Eliminar los duplicados de un array, utilizando `Array.reduce()`.
 7. Eliminar los duplicados de un array, utilizando `Set`.
-8. Chequear si una palabra es _palíndromo_<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+8. Implementar la función `isPalindrome`, para chequear si una palabra es _palíndromo_<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
 9. Implementar la función `map()` de `Array` usando `reduce()`.
 10. Implementar la función `filter()` de `Array` usando `reduce()`.
+11. Implementar la función `isAnagram: (string, string) -> boolean`, que recibe 2 palabras (o frases, puede haber espacios) y retorna `true` si estas son anagramas (es decir, están formadas por las mismas letras, en la misma cantidad).
+
+Ejemplos de anagramas:
+
+- saco / cosa
+- certificable / rectificable
+- enfriamiento / refinamiento
+- anagramas / A ganar más
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
@@ -720,6 +728,12 @@ copyArrayAndDivideBy2(arr);
 copyArrayAndAdd2(arr);
 ```
 
+2. Implementar la función `capitalize: string -> string`, que recibe un texto y devuelve el mismo con todas sus palabras teniendo la primer letra en mayúscula. 
+
+Ejemplo:
+
+`'The quick brown fox jumps over the lazy dog' -> 'The Quick Brown Fox Jumps Over The Lazy Dog'`
+
 ### Composición de Funciones
 
 1. El siguiente código calcula el costo de comprar algo online. Reescribirlo, utilizando composición de funciones puras. Para componer, vamos a utilizar [`compose`](https://ramdajs.com/docs/#compose) y [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/) (implementar 2 versiones)
@@ -736,6 +750,10 @@ calculateTotal(ITEM_PRICE);
 2. Agregar al ítem anterior la función `applySaleDiscount: (number, number) -> number`, que recibe un costo inicial y un porcentaje de descuento y retorna el valor final con el descuento aplicado. Componer esta función utilizando `pipe`, para calcular el costo de una compra online con un 10% de descuento.
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
+### Closures
+
+[WIP]
 
 ## Lecturas recomendadas: 
 
