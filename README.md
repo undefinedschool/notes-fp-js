@@ -548,6 +548,29 @@ enhance(number);
 
 > Este patrón es muy común en la programación funcional y podemos implementarlo utilizando el método [`compose`](https://ramdajs.com/docs/#compose) de la librería utilitaria [Ramda](https://ramdajs.com/)
 
+Un tip muy útil para _debuggear_ es utilizar funciones para _tracear_ el input/output de cada función
+
+```js
+const trace = msg => x => (console.log(msg, x), x);
+```
+
+```js
+const bookTitles = {
+  'The Culture Code',
+  'Designing Your Life',
+  'Algorithms to Live By'
+}
+
+const slugify = compose(
+  map(join('-')),
+  trace('after split'),
+  map(split(' ')),
+  trace('after lowercase'),
+  map(lowerCase),
+  trace('before lowercase')
+)(bookTitles);
+```
+
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 #### `pipe`
