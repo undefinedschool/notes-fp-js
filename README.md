@@ -680,7 +680,7 @@ Es una de las HOF más versátiles que existen
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 ```
 
-> `reduce` recibe un callback al que llamamos `reducer`
+> `reduce` recibe un callback al que llamamos `reducer`, que define cómo vamos a combinar 2 valores (acumulador y valor actual) para obtener otro, que será el input de la próxima iteración
 
 Gracias a `reduce` podemos, por ejemplo
 
