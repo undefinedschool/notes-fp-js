@@ -736,7 +736,7 @@ Ejemplo:
 
 ### Composición de Funciones
 
-1. Descomponer la función `capitalize` del ejercicio anterior en pequeñas funciones (puras) que hagan 1 cosa y componerlas utilizando `pipe`.
+1. Descomponer la función `capitalize` del ejercicio anterior en pequeñas funciones (puras) que hagan 1 cosa y componerlas utilizando [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/).
 
 2. El siguiente código calcula el costo de comprar algo online. Reescribirlo, utilizando composición de funciones puras. Para componer, vamos a utilizar [`compose`](https://ramdajs.com/docs/#compose) y [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/) (implementar las 2 versiones)
 
