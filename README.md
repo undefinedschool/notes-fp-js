@@ -522,7 +522,7 @@ const result = f(g(h(i(j(k(x))))));
 
 Terminaríamos con cada vez más funciones anidadas, algo que podríamos llamar _Composition Hell_ 🤔
 
-Utilizando `reduce` o [`reduceRight`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight) (dependiendo del orden en el que querramos componer), podemos escribir una _función de composición_ para obtener el mismo resultado.
+Utilizando [`reduceRight`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight) (para procesar los valores _de adentro hacia afuera_), podemos escribir una _función de composición_ para obtener el mismo resultado.
 
 ```js
 const f = x => x + 1;
