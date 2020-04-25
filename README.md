@@ -27,6 +27,7 @@
     - [`pipe`](https://github.com/undefinedschool/notes-fp-js#pipe)
       - [_Pipeline operator_](https://github.com/undefinedschool/notes-fp-js#pipeline-operator)
     - [Ejercicio](https://github.com/undefinedschool/notes-fp-js#ejercicio)
+  - [`reduce`](https://github.com/undefinedschool/notes-fp-js#reduce)
   - [_Point-Free Style_](https://github.com/undefinedschool/notes-fp-js#point-free-style)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
@@ -648,6 +649,23 @@ str
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
+### `reduce`
+
+Es una de las HOF más versátiles que existen
+
+```js
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+```
+
+> `reduce` recibe un callback al que llamamos `reducer`
+
+Gracias a `reduce` podemos, por ejemplo
+
+- implementar cualquier método de `Array` (incluyendo `map` y `filter`)
+- **componer funciones**: es la base de `compose` y `pipe`
+
+Por lo tanto se trata de una función muy importante dentro del paradigma funcional.
+
 ### _Point-Free Style_
 
 En la programación imperativa, cuando realizamos algún tipo de operación sobre alguna variable, siempre vamos a encontrar referencias a la misma en cada paso.
@@ -666,6 +684,27 @@ console.log(toSlug('JS rlz'));
 ```
 
 `pipe()` tiene un parámetro implícito (el string). Esta forma de escribir las funciones se conoce como _Point-Free_.
+
+👉 **Otro caso común es utilizar _Point-Free_ para reemplazar funciones anónimas y escribir código más legible y declarativo**. Además, al definir funciones con un nombre, nos va a permitir testear estas funciones. 
+
+Por ejemplo
+
+```js
+// utilizando un callback anónimo
+const arr = [1, 2, 3];
+
+arr.map(x => x * 2);
+```
+
+```js
+// utilizando point-free
+const arr = [1, 2, 3];
+const double = x => x * 2;
+
+arr.map(double);
+```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 ### Closures
 
