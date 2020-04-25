@@ -31,8 +31,8 @@
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
-  - [Higher-Order Functions]()
-  - [Composición de funciones]()
+  - [Higher-Order Functions](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#higher-order-functions-1)
+  - [Composición de funciones](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#composici%C3%B3n-de-funciones-1)
 - [Lecturas Recomendadas](https://github.com/undefinedschool/notes-fp-js#lecturas-recomendadas)
 
 ---
@@ -752,7 +752,7 @@ Ejemplo:
 
 ### Composición de Funciones
 
-1. Descomponer la función `capitalize` del ejercicio anterior en pequeñas funciones (puras) que hagan 1 cosa y componerlas utilizando [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/).
+1. Descomponer la función `capitalize` del ejercicio anterior (ítem 3) en pequeñas funciones (puras) que hagan 1 cosa y componerlas utilizando [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/).
 
 2. El siguiente código calcula el costo de comprar algo online. Reescribirlo, utilizando composición de funciones puras. Para componer, vamos a utilizar [`compose`](https://ramdajs.com/docs/#compose) y [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/) (implementar las 2 versiones)
 
