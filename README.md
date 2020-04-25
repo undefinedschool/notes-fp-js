@@ -31,6 +31,8 @@
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
+  - [Higher-Order Functions]()
+  - [Composición de funciones]()
 - [Lecturas Recomendadas](https://github.com/undefinedschool/notes-fp-js#lecturas-recomendadas)
 
 ---
@@ -728,7 +730,21 @@ copyArrayAndDivideBy2(arr);
 copyArrayAndAdd2(arr);
 ```
 
-2. Implementar la función `capitalize: string -> string`, que recibe un texto y devuelve el mismo con todas sus palabras teniendo la primer letra en mayúscula.
+2. Implementar la función (pura) `generateUnorderedList`, que dado un array de números de tamaño `n`, genera una lista desordenada (`ul`) con `n` items (`li`), donde cada item de esta lista será un valor del array, realizando las operaciones necesarias en el DOM. Por ejemplo, a partir del array `[1, 2, 3, 4, 5]`, debería obtener la lista
+
+```html
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+</ul>
+```
+
+Crear un `index.html` para ver el resultado. Implementar las funciones auxiliares (puras) necesarias y luego componer utilizando [`pipe()`](https://ramdajs.com/docs/#pipe) de [Ramda](https://ramdajs.com/).
+
+3. Implementar la función `capitalize: string -> string`, que recibe un texto y devuelve el mismo con todas sus palabras teniendo la primer letra en mayúscula.
 
 Ejemplo:
 
