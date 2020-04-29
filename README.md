@@ -342,6 +342,8 @@ también es _impura_, por las siguientes razones:
 - está accediendo a una variable por fuera de su _scope_
 - crea un _side-effect_ al modificar una variable externa
 
+> **Las funciones puras también son más robustas**: el orden de ejecución no tienen ningún impacto en el sistema. Además, las operaciones realizadas con funciones puras pueden ser paralelizadas.
+
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
 #### Ejercicios
