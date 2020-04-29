@@ -21,7 +21,7 @@
   - [Inmutabilidad](https://github.com/undefinedschool/notes-fp-js#inmutabilidad)
     - [Inmutabilidad, `const` y objetos en JS](https://github.com/undefinedschool/notes-fp-js#inmutabilidad-const-y-objetos-en-js)
   - [Funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras)
-    - [Otros beneficios de utilizar funciones puras]()
+    - [Otros beneficios de utilizar funciones puras](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#otros-beneficios-de-utilizar-funciones-puras)
     - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios)
   - [Composición de funciones](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones)
     - [`compose`](https://github.com/undefinedschool/notes-fp-js#compose)
