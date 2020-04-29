@@ -21,6 +21,7 @@
   - [Inmutabilidad](https://github.com/undefinedschool/notes-fp-js#inmutabilidad)
     - [Inmutabilidad, `const` y objetos en JS](https://github.com/undefinedschool/notes-fp-js#inmutabilidad-const-y-objetos-en-js)
   - [Funciones puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras)
+    - [Otros beneficios de utilizar funciones puras]()
     - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios)
   - [Composición de funciones](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones)
     - [`compose`](https://github.com/undefinedschool/notes-fp-js#compose)
@@ -66,7 +67,7 @@ La programación funcional es un **paradigma de programación** que nos sirve pa
 ➕ simple (sólo tenemos valores y funciones)     
 ➕ fácil de razonar  
 ➕ fácil de debuggear (cada función es una unidad con input/output definido)   
-➕ [fácil de testear](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/)  
+➕ [fácil de testear](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/), si usamos funciones puras  
 ➕ fácil de extender (podemos agregar funcionalidades combinando otras ya existentes)   
 ➕ fácil de refactorizar (nuevamente, sólo tenemos valores y funciones)   
 ➕ performance, si paralelizamos la ejecución de código      
@@ -342,7 +343,11 @@ también es _impura_, por las siguientes razones:
 - está accediendo a una variable por fuera de su _scope_
 - crea un _side-effect_ al modificar una variable externa
 
-> **Las funciones puras también son más robustas**: el orden de ejecución no tienen ningún impacto en el sistema. Además, las operaciones realizadas con funciones puras pueden ser paralelizadas.
+#### Otros beneficios de utilizar funciones puras
+
+- **Las funciones puras son más robustas**: el orden de ejecución no tienen ningún impacto en el sistema. 
+- Las operaciones realizadas con funciones puras pueden ser paralelizadas.
+- **Más fáciles de testear** (unit tests), ya que no debemos considerar ningún contexto o estado externo, sólo el input y el output de la función.
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
