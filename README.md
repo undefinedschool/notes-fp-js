@@ -870,4 +870,4 @@ calculateTotal(ITEM_PRICE);
 
 <sup id="cite_note-3"><a href="#cite_ref-3">3</a></sup> Un palíndromo es una palabra o frase que se lee igual para adelante y para atrás.
 
-<sup id="cite_note-4"><a href="#cite_ref-4">4</a></sup> Tener en cuenta que `Object.freeze()` funciona a nivel [_shallow_](https://dev.to/krsgrnt/safely-copying-nested-objects-in-javascript-5fpi), es decir, sólo congela el primer nivel y no los objetos anidados, que siguen siendo referencias. Una posible solución para esto es utilizar el método [`deepClone()`](https://lodash.com/docs#cloneDeep) de [lodash](https://lodash.com/).
+<sup id="cite_note-4"><a href="#cite_ref-4">4</a></sup> Tener en cuenta que `Object.freeze()` funciona a nivel [_shallow_](https://dev.to/krsgrnt/safely-copying-nested-objects-in-javascript-5fpi), es decir, sólo congela el primer nivel y no los objetos anidados, que siguen siendo referencias. Una posible solución para esto es utilizar el método [`cloneDeep()`](https://lodash.com/docs#cloneDeep) de [lodash](https://lodash.com/).
