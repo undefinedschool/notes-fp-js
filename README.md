@@ -858,6 +858,12 @@ calculateTotal(ITEM_PRICE);
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
+### Recursión
+
+1. Implementar la función recursiva `length: Array -> number`, para calcular la longitud de un array. 
+
+**Bonus:** resolver el ejercicio sin utilizar `Array.length`.
+
 ### Closures
 
 [WIP]
