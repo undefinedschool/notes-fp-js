@@ -769,6 +769,10 @@ function sumRange(n) {
 
 > Todo algoritmo recursivo debe tener al menos un caso base y retornar un valor, sino nunca va a terminar y generamos un _stack overflow_!
 
+#### Recursión y ciclos
+
+En el paradigma funcional buscamos evitar los [side effects](https://github.com/undefinedschool/notes-fp-js#side-effects). Al iterar utilizando un ciclo `for` o `while`, estamos reutilizando los resultados de la iteración previa en la siguiente y reasignando valores, como los índices. Es por eso que para iterar utilizamos algoritmos recursivos, para usar siempre funciones puras y valores inmutables.
+
 👉 Ver más detalles en [Introduction to Recursion](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/introduction-to-recursion)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
@@ -892,6 +896,29 @@ calculateTotal(ITEM_PRICE);
 1. Implementar la función recursiva `length: Array -> number`, para calcular la longitud de un array. 
 
 **Bonus:** resolver el ejercicio sin utilizar `Array.length`.
+
+2. Implementar la función recursiva `productOfArray: Array -> number`, que recibe un array de enteros y retorna el producto de los mismos. Si el array es vacío, retornar 0.
+
+3. Implementar la función recursiva `contains: (Object, value) -> boolean`, que devuelve `true` si un objeto contiene cierto valor. Notar que el objeto puede tener a su vez objetos anidados como propiedades, por ejemplo
+
+```js
+const nestedObject = {
+  data: {
+    info: {
+      stuff: {
+        thing: {
+          moreStuff: {
+            magicNumber: 44
+          }
+        }
+      }
+    }
+  }
+}
+
+contains(nestedObject, 44);    // true
+contains(nestedObject, "foo"); // false
+```
 
 ### Closures
 
