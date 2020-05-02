@@ -39,7 +39,7 @@
   - [Composición de funciones](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#composici%C3%B3n-de-funciones-1)
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n-1)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures-1)
-  - [Reduce]()
+  - [Reduce](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#reduce-1)
 - [Lecturas Recomendadas](https://github.com/undefinedschool/notes-fp-js#lecturas-recomendadas)
 
 ---
