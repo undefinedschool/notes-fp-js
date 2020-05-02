@@ -780,6 +780,8 @@ En el paradigma funcional buscamos evitar los [side effects](https://github.com/
 
 ### Closures
 
+En programación funcional, los closures nos permiten utilizar [_currying_](https://www.yazeedb.com/posts/deeply-understand-currying-in-7-minutes) y _aplicaciones parciales_ de funciones.
+
 👉 Ver [Notas sobre Closures](https://github.com/undefinedschool/notes-closures/)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
