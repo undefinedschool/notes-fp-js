@@ -786,6 +786,35 @@ En programación funcional, los closures nos permiten utilizar [_currying_](http
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
+### Currying
+
+La _currificación_ es una técnica que nos permite manipular y transformar los inputs, para generalizar y favorecer la composición de funciones. Utilizando closures, podemos transformar los inputs de la función `add`
+
+```js
+const add = (x, y) => x + y;
+
+add(2, 4); // 6
+```
+
+en
+
+```js
+const add = x =>
+  y => x + y;
+  
+add(2)(4); // 6
+```
+
+La función retornada tiene acceso a `x` y a `y` (a través del closure), por lo que podemos hacer
+
+```js
+const add10 = add(10);
+
+add10(10); // 20
+add10(20); // 30
+add10(30); // 40
+```
+
 ## Ejercicios
 
 ### Funciones Puras
