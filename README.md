@@ -746,6 +746,8 @@ Cuando una función se invoca a si misma, se la conoce como _función recursiva_
 
 Aparte del caso base, para asegurarnos de que enventualmente llegamos a él (y la función retorna un valor), cada llamada recursiva debe ser invocada con una instancia más simple (y diferente) del problema.
 
+En algunas ocasiones, los algoritmos recursivos resultan legibles y simples de entender que sus versiones iterativas.
+
 Un algoritmo recursivo está compuesto de
 
 - **caso(s) base**: definen las condiciones para terminar y retornar la solución a un subproblema.
@@ -766,6 +768,8 @@ function sumRange(n) {
 ```
 
 > Todo algoritmo recursivo debe tener al menos un caso base y retornar un valor, sino nunca va a terminar y generamos un _stack overflow_!
+
+👉 Ver más detalles en [Introduction to Recursion](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/introduction-to-recursion)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
