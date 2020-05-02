@@ -88,7 +88,7 @@ Usar [_funciones puras_](https://github.com/undefinedschool/notes-fp-js#funcione
 
 👉 Tengamos en cuenta que **simple no significa _fácil_**: los problemas difíciles lo seguirán siendo, el paradigma funcional no va a cambiar esto, **la simplificación viene dada porque los problemas resultan más fáciles de razonar, al descomponerlos en subproblemas**. Estos problemas son mucho más sencillos de resolver de forma independiente y pueden componerse para llegar a la solución buscada.
 
-> JavaScript no es un lenguaje de programación funcional _puro_, pero tiene soporte para algunas características del paradigma. Existen lenguajes funcionales puros que compilan a JavaScript (y pueden utilizarse en frontend), como [Elm](https://elm-lang.org/) y [PureScript](https://www.purescript.org/)
+> JavaScript no es un lenguaje de programación funcional _puro_, pero tiene soporte para algunas características del paradigma. Existen lenguajes funcionales puros que compilan a JavaScript (y pueden utilizarse en frontend), como [Elm](https://elm-lang.org/), [ClojureScript](https://clojurescript.org/) y [PureScript](https://www.purescript.org/)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
