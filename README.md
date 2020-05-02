@@ -921,6 +921,13 @@ contains(nestedObject, 44);    // true
 contains(nestedObject, "foo"); // false
 ```
 
+4. Implementar la función recursiva `search: Array -> number`, que devuelve el índice de un elemento en un array. Si el valor no se encuentra, retornar -1.
+
+```js
+search([1,2,3,4,5],5;)  // 4
+search([1,2,3,4,5],15); // -1
+```
+
 ### Closures
 
 [WIP]
