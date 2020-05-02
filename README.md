@@ -31,6 +31,7 @@
   - [`reduce`](https://github.com/undefinedschool/notes-fp-js#reduce)
   - [_Point-Free Style_](https://github.com/undefinedschool/notes-fp-js#point-free-style)
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
+    - [Recursión y ciclos](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#recursi%C3%B3n-y-ciclos)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
