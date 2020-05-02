@@ -39,6 +39,7 @@
   - [Composición de funciones](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#composici%C3%B3n-de-funciones-1)
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n-1)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures-1)
+  - [Reduce]()
 - [Lecturas Recomendadas](https://github.com/undefinedschool/notes-fp-js#lecturas-recomendadas)
 
 ---
@@ -961,7 +962,39 @@ search([1,2,3,4,5],15); // -1
 
 ### Closures
 
-[WIP]
+1. Implementar la función `createFunctionPrinter`, que acepta un input (string) y retorna una función. Cuando la función creada es llamada, debe loguear el input utilizado cuando la función fue creada.
+
+```js
+const printSample = createFunctionPrinter('sample');
+const printHello = createFunctionPrinter('hello');
+
+printSample(); //should console.log('sample');
+printHello(); //should console.log('hello');
+```
+
+2. Implementar la función `addX`, que retorna una función que incrementa el input en `X`.
+
+```js
+const addTwo = addX(2);
+
+addTwo(1); // debe retornar 3
+addTwo(2); // debe retornar 4
+addTwo(3); // debe retornar 5
+
+const addByThree = addX(3);
+addThree(1); // debe retornar 4
+addThree(2); // debe retornar 5
+```
+
+3. Implementar la función `russianRoulette: number -> Function`, que acepta un número `n` y retorna una función. La función retornada no tiene argumentos y va a retornar el string `'Click.'` las primeras `n - 1` veces que es invocada. En la siguiente invocación (`n`, la enésima), la función retornada va a retornar el string `'BANG!'`. Luego, en cada invocación posterior, la función retornada va a retornar el string `'Reload to play again'`.
+
+4. Implementar la función `average`, que no recibe argumentos y retorna una función (que puede recibir un número como su único argumento o ningún argumento directamente). Cuando la función retornada es invocada con un número, el output debe ser el promedio de todos los números que se le pasaron a la función (incluyendo valores duplicados). Cuando la función retornada es invocada sin argumentos, debe retornar el promedio actual. Si la función retornada es invocada sin argumentos antes de que se le pase cualquier número, debe retornar 0.
+
+### Reduce
+
+1. Implementar la función `allTestPassed`, que recibe un array de funciones evaluadoras que definen alguna condición sobre un input (c/u retorna un booleano) y un valor. Usando `reduce`, retornar un booleano indicando si el valor pasa o no todos los tests (funciones evaluadoras).
+
+2. Implementar la función `movieSelector`, que recibe un array de objetos conteniendo información acerca de películas (id, título y puntaje). Encadenar invocaciones de `map`, `filter` y `reduce` para retornar un array que contenga sólo aquellar películas con un puntaje mayor a 5. 
 
 ## Lecturas recomendadas: 
 
