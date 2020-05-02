@@ -742,14 +742,30 @@ arr.map(double);
 
 Cuando una función se invoca a si misma, se la conoce como _función recursiva_.
 
-La recursión es una técnica de programación en la que la solución de un problema depende de las soluciones de sus _subproblemas_. Los subproblemas consisten básicamente en variantes más pequeñas y sencillas del problema original, hasta llegar eventualemente a algún caso trivial, que llamaremos _caso base_.
+**La recursión es una técnica de programación en la que la solución de un problema depende de las soluciones de sus _subproblemas_**. Los subproblemas consisten básicamente en variantes más pequeñas y sencillas del problema original, hasta llegar eventualemente a algún caso trivial, que llamaremos _caso base_.
 
 Aparte del caso base, para asegurarnos de que enventualmente llegamos a él (y la función retorna un valor), cada llamada recursiva debe ser invocada con una instancia más simple (y diferente) del problema.
 
-- caso base
-- caso recursivo
+Un algoritmo recursivo está compuesto de
 
-> Todo algoritmo recursivo debe tener al menos un caso base, sino nunca va a terminar!
+- **caso(s) base**: definen las condiciones para terminar y retornar la solución a un subproblema.
+- **caso recursivo**: hacemos la llamada recursiva con una variante más simple del problema original. 
+
+> Notar que cada vez que llamamos a la función recursiva, los argumentos deberían cambiar y _converger_ al caso base
+
+En el siguiente ejemplo, la función `sumRange` devuelva la suma de los valores de 1 a `n`
+
+```js
+function sumRange(n) {
+  // caso base
+  if (n === 1) return 1;
+  
+  // llamada recursiva
+  return n + sumRange(n - 1);
+}
+```
+
+> Todo algoritmo recursivo debe tener al menos un caso base y retornar un valor, sino nunca va a terminar!
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
