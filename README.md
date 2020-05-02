@@ -765,7 +765,7 @@ function sumRange(n) {
 }
 ```
 
-> Todo algoritmo recursivo debe tener al menos un caso base y retornar un valor, sino nunca va a terminar!
+> Todo algoritmo recursivo debe tener al menos un caso base y retornar un valor, sino nunca va a terminar y generamos un _stack overflow_!
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
