@@ -740,8 +740,6 @@ arr.map(double);
 
 ### Recursión
 
-[WIP]
-
 Cuando una función se invoca a si misma, se la conoce como _función recursiva_.
 
 La recursión es una técnica de programación en la que la solución de un problema depende de las soluciones de sus _subproblemas_. Los subproblemas consisten básicamente en variantes más pequeñas y sencillas del problema original, hasta llegar eventualemente a algún caso trivial, que llamaremos _caso base_.
@@ -757,7 +755,7 @@ Aparte del caso base, para asegurarnos de que enventualmente llegamos a él (y l
 
 ### Closures
 
-[WIP]
+👉 Ver [Notas sobre Closures](https://github.com/undefinedschool/notes-closures/)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
