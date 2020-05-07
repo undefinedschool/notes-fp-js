@@ -64,7 +64,7 @@ Cómo podríamos lograr esto?
 
 ## Paradigma 
 
-La programación funcional es un **paradigma de programación** que nos sirve para estructurar, organizar y controlar la complejidad de nuestro código, favoreciendo un estilo más [**_declarativo_**](https://github.com/undefinedschool/notes-fp-js#declarativo-vs-imperativo)_, utilizando expresiones y [**_funciones puras_**](https://github.com/undefinedschool/notes-fp-js#funciones-puras) para construir aplicaciones, evitando los [**_side effects_**](https://github.com/undefinedschool/notes-fp-js#side-effects) y la mutación del [**_estado**](https://github.com/undefinedschool/notes-fp-js#estado-compartido), logrando así que el código resulte...
+La programación funcional es un **paradigma de programación** que nos sirve para estructurar, organizar y controlar la complejidad de nuestro código, favoreciendo un estilo más [**_declarativo_**](https://github.com/undefinedschool/notes-fp-js#declarativo-vs-imperativo)_, componiendo [**_funciones puras_**](https://github.com/undefinedschool/notes-fp-js#funciones-puras) para construir aplicaciones, evitando el uso de [**_estado compartido_**](https://github.com/undefinedschool/notes-fp-js#estado-compartido), los [**_datos mutables_**](https://github.com/undefinedschool/notes-fp-js#inmutabilidad) y los [**_side effects_**](https://github.com/undefinedschool/notes-fp-js#side-effects), logrando así que el código resulte...
 
 ➕ legible    
 ➕ declarativo  
@@ -85,6 +85,8 @@ Para esto, vamos a utilizar
 - composición: construimos nuestra aplicación a partir de estos bloques
 
 Nuestra aplicación estará definida en términos de una función principal. La función principal se define a partir de otras funciones, que a su vez se definen a partir de otras funciones, etc, hasta llegar a valores de tipos primitivos como `number` o `string`.
+
+El _estado_ de nuestra aplicación fluye a través de _funciones puras_, en contraste con lo que sucede en la [_Programación Orientada a Objetos_](https://github.com/undefinedschool/notes-oop-js), donde el estado de las aplicaciones es usualmente compartido en objetos y manipulado a través de sus métodos.
 
 Usar [_funciones puras_](https://github.com/undefinedschool/notes-fp-js#funciones-puras) y [_componerlas_](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) para resolver problemas más grandes son habilidades muy útiles que pueden ser utilizadas para simplificar esta complejidad.
 
