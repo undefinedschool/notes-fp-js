@@ -258,6 +258,8 @@ Las funciones limitan los cambios realizados al estado del programa, evitando ac
 
 Decimos que **los datos son _inmutables_ si nunca cambian (no pueden modificarse)**. En el paradigma funcional, los datos son inmutables. Utilizar valores inmutables facilita mucho razonar sobre el código de nuestra aplicación, ya que no modificaremos accidentalmente el [estado](https://github.com/undefinedschool/notes-fp-js#estado-compartido) de la misma, por lo que es recomendable aplicar esta característica del paradigma siempre que podamos.
 
+> De ahora en más entonces, vamos a llamar _mutación_ al cambio o alteración de valores y _side effect_ al resultado de esta acción. Recordemos que, idealmente, las funciones que utilicemos deben ser [puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras), es decir, que no generan ningún tipo de side effect.
+
 Las _variables_ entonces, pasan a ser _constantes_, no pueden modificarse: una vez creada una variable con cierto valor, la única forma que tenemos de modificar el mismo es creando una nueva variable con el nuevo valor. 
 
 Por ejemplo, si queremos modificar un array, para agregar un nuevo ítem al mismo, creamos un nuevo array concatenando el array anterior con el nuevo ítem.
