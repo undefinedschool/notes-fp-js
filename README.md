@@ -92,7 +92,7 @@ La programación funcional es un **paradigma de programación** que nos sirve pa
 ➕ simple (sólo tenemos valores y funciones)     
 ➕ fácil de razonar  
 ➕ fácil de debuggear (cada función es una unidad con input/output definido)   
-➕ [fácil de testear](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/), si usamos funciones puras  
+➕ fácil de testear, si usamos funciones puras  
 ➕ fácil de extender (podemos agregar funcionalidades combinando otras ya existentes)   
 ➕ fácil de refactorizar (nuevamente, sólo tenemos valores y funciones)   
 ➕ performance, si paralelizamos la ejecución de código      
@@ -374,7 +374,7 @@ también es _impura_, por las siguientes razones:
 
 - **Las funciones puras son más robustas**: el orden de ejecución no tienen ningún impacto en el sistema. 
 - Las operaciones realizadas con funciones puras pueden ser paralelizadas.
-- **Más fáciles de testear** (unit tests), ya que no debemos considerar ningún contexto o estado externo, sólo el input y el output de la función.
+- [**Más fáciles de testear**](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/) (unit tests), ya que no debemos considerar ningún contexto o estado externo, sólo el input y el output de la función.
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
