@@ -988,9 +988,27 @@ addThree(1); // debe retornar 4
 addThree(2); // debe retornar 5
 ```
 
-3. Implementar la función `russianRoulette: number -> Function`, que acepta un número `n` y retorna una función. La función retornada no tiene argumentos y va a retornar el string `'Click.'` las primeras `n - 1` veces que es invocada. En la siguiente invocación (`n`, la enésima), la función retornada va a retornar el string `'BANG!'`. Luego, en cada invocación posterior, la función retornada va a retornar el string `'Reload to play again'`.
+3. Dado el siguiente código, identificar los side effects y luego refactorizarlo para eliminar los mismos y que las funciones `travelToTheFuture` y `travelToThePast` sólo sean accesibles como métodos del objeto `timeMachine`.
 
-4. Implementar la función `average`, que no recibe argumentos y retorna una función (que puede recibir un número como su único argumento o ningún argumento directamente). Cuando la función retornada es invocada con un número, el output debe ser el promedio de todos los números que se le pasaron a la función (incluyendo valores duplicados). Cuando la función retornada es invocada sin argumentos, debe retornar el promedio actual. Si la función retornada es invocada sin argumentos antes de que se le pase cualquier número, debe retornar 0.
+```js
+const currentYear = 2020;
+
+function travelToTheFuture(years) {
+  const newCurrentYear = currentYear + years;
+  
+  return newCurrentYear;
+}
+
+function travelToThePast(years) {
+  const newCurrentYear = currentYear - years;
+  
+  return newCurrentYear;
+}
+```
+
+4. Implementar la función `russianRoulette: number -> Function`, que acepta un número `n` y retorna una función. La función retornada no tiene argumentos y va a retornar el string `'Click.'` las primeras `n - 1` veces que es invocada. En la siguiente invocación (`n`, la enésima), la función retornada va a retornar el string `'BANG!'`. Luego, en cada invocación posterior, la función retornada va a retornar el string `'Reload to play again'`.
+
+5. Implementar la función `average`, que no recibe argumentos y retorna una función (que puede recibir un número como su único argumento o ningún argumento directamente). Cuando la función retornada es invocada con un número, el output debe ser el promedio de todos los números que se le pasaron a la función (incluyendo valores duplicados). Cuando la función retornada es invocada sin argumentos, debe retornar el promedio actual. Si la función retornada es invocada sin argumentos antes de que se le pase cualquier número, debe retornar 0.
 
 ### Reduce
 
