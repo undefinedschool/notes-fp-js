@@ -54,8 +54,8 @@
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
     - [Recursión y ciclos](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n-y-ciclos)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
-  - [Function Decorators](https://github.com/undefinedschool/notes-fp-js#function-decorators)
-  - [Currying]()
+    - [Function Decorators](https://github.com/undefinedschool/notes-fp-js#function-decorators)
+    - [Currying]()
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
   - [Higher-Order Functions](https://github.com/undefinedschool/notes-fp-js#higher-order-functions-1)
@@ -814,9 +814,9 @@ En programación funcional, los closures nos permiten utilizar [_currying_](http
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
 
-### Function Decorators
+#### Function Decorators
 
-Nos permiten _editar_ o modificar el comportamiento de una función, sin reescribirla.
+Son funciones que nos permiten _'editar'_ o _'modificar'_ el comportamiento de otra función, sin reescribirla. Notar que esto último es una forma de decir, ya que no podemos modificar el cuerpo de una función una vez creada y guardada.
 
 Para esto, se crea una nueva función, que recibe como argumento a la función que queremos _editar_ y utilizamos [_closures_](https://github.com/undefinedschool/notes-closures/) para mantener el estado interno.
 
@@ -839,13 +839,18 @@ function once(decoratedFn) {
 }
 
 const multiplyBy2 = x => x * 2;
+// _decorando_ `multiplyBy2` para que se ejecute 1 sola vez
 const multiplyBy2Once = once(multiplyBy2);
 
 multiplyBy2Once(2); // 4;
 multiplyBy2Once(5); // 'Nope.'
 ```
 
-### Currying
+![](https://i.pinimg.com/originals/53/3b/d7/533bd7b3c893f1c9fa66032f55509dac.jpg)
+
+👉 **De esta forma, los _decorators_ nos permiten reutilizar funciones ya existentes para extender o generar nuevas funcionalidades.**
+
+#### Currying
 
 La _currificación_ es una técnica que nos permite manipular y transformar los inputs, para generalizar y favorecer la composición de funciones. Utilizando closures, podemos transformar los inputs de la función `add`
 
