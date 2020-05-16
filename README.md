@@ -63,6 +63,7 @@
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n-1)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures-1)
   - [Reduce](https://github.com/undefinedschool/notes-fp-js#reduce-1)
+  - [Aplicación parcial y _Currying_]()
 - [Lecturas Recomendadas](https://github.com/undefinedschool/notes-fp-js#lecturas-recomendadas)
 
 ---
@@ -894,21 +895,37 @@ const decoratedFn = time(loop);
 
 #### Aplicaciones parciales y _Currying_
 
-La _currificación_ es una técnica que nos permite manipular y transformar los inputs, para generalizar y favorecer la composición de funciones. Utilizando closures, podemos transformar los inputs de la función `add`
+Vimos que la [composición](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) de funciones resulta muy útil para reutilizar funciones existentes, pero requiere que todas las funciones se comporten de la misma manera. Por ejemplo, tomar 1 input y retornar 1 output. Qué pasa si intentamos componer una función que retorno 1 valor con otra que espera recibir 2? Tenemos un problema de [aridad](https://github.com/undefinedschool/notes-fp-js#aridad), no coinciden.
+
+Una posible solución, para poder reutilizar y evitar escribir nuevas funciones, es [_decorar_](https://github.com/undefinedschool/notes-fp-js#function-decorators) esta función, donde le asignamos un valor por default a uno de sus inputs. Esto se conoce como _aplicación parcial_.
 
 ```js
-const add = (x, y) => x + y;
+const multiply = (a, b) => a * b
+function prefillFunction (fn, prefilledValue){
+    const inner = (liveInput) => {
+        const output = fn(liveInput, prefilledValue)
+        return output
+    }
+    return inner
+}
 
-add(2, 4); // 6
+const multiplyBy2 = prefillFunction(multiply, 2)
+const result = multiplyBy2(5)
 ```
 
-en
+_Currificar_ una función significa convertir 1 función de _aridad_ `n` en `n` funciones de _aridad_ 1. Es decir, reestructurar una función de forma tal que reciba 1 argumento, luego retorne otra función que reciba el siguiente argumento, etc.
+
+Por ejemplo
 
 ```js
-const add = x =>
+// un-curried version
+const add = (x, y) => x + y;
+
+// curried version
+const curriedAdd = x =>
   y => x + y;
-  
-add(2)(4); // 6
+
+curriedAdd(1)(2); // 3
 ```
 
 La función retornada tiene acceso a `x` y a `y` (a través del closure), por lo que podemos hacer
@@ -1118,6 +1135,18 @@ function travelToThePast(years) {
 1. Implementar la función `allTestPassed`, que recibe un array de funciones evaluadoras que definen alguna condición sobre un input (c/u retorna un booleano) y un valor. Usando `reduce`, retornar un booleano indicando si el valor pasa o no todos los tests (funciones evaluadoras).
 
 2. Implementar la función `movieSelector`, que recibe un array de objetos conteniendo información acerca de películas (id, título y puntaje). Encadenar invocaciones de `map`, `filter` y `reduce` para retornar un array que contenga sólo aquellar películas con un puntaje mayor a 5. 
+
+### Aplicación parcial y _Currying_
+
+1. Completar el código de la siguiente función de forma tal que utilice _currying_ para sumar `x`, `y` y `z`.
+
+```js
+function add(x) {
+  // completar
+}
+
+add(10)(20)(30);
+```
 
 ## Lecturas recomendadas: 
 
