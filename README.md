@@ -54,7 +54,7 @@
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
     - [Recursión y ciclos](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#recursi%C3%B3n-y-ciclos)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
-  - [Function Decorators]()
+  - [Function Decorators](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#function-decorators)
   - [Currying]()
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
