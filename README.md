@@ -848,7 +848,49 @@ multiplyBy2Once(5); // 'Nope.'
 
 ![](https://i.pinimg.com/originals/53/3b/d7/533bd7b3c893f1c9fa66032f55509dac.jpg)
 
+En este otro ejemplo, `logging` es un _decorator_ que le aplicamos a la función `writeSomething`, para loguear un cierto texto antes y después.
+
+```js
+function writeSomething(name) {
+  console.log(`Hello ${name}`);
+}
+
+function logging(wrapped) {
+  return function() {
+    console.log('Starting...');
+    const result = wrapped(...arguments);
+    console.log('Finished!');
+
+    return result;
+  }
+}
+
+const wrapped = logging(writeSomething);
+```
+
+Otro ejemplo. En este caso, el decorator `time` toma el tiempo de ejecución.
+
+```js
+function loop(times) {
+  const arr = new Array(times);
+
+  arr.forEach(x => x);
+}
+
+function time(decoratedFn) {
+  return function() {
+    console.time('time');
+    wrapped(...arguments);
+    console.timeEnd('time');
+  }
+}
+
+const decoratedFn = time(loop);
+```
+
 👉 **De esta forma, los _decorators_ nos permiten reutilizar funciones ya existentes para extender o generar nuevas funcionalidades.**
+
+> Más detalles en [Exploring EcmaScript Decorators](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841).
 
 #### Currying
 
