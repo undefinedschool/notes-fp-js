@@ -55,7 +55,7 @@
     - [Recursión y ciclos](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n-y-ciclos)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
     - [Function Decorators](https://github.com/undefinedschool/notes-fp-js#function-decorators)
-    - [Currying]()
+    - [Aplicaciones parciales y _Currying_]()
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
   - [Higher-Order Functions](https://github.com/undefinedschool/notes-fp-js#higher-order-functions-1)
@@ -892,7 +892,7 @@ const decoratedFn = time(loop);
 
 > Más detalles en [Exploring EcmaScript Decorators](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841).
 
-#### Currying
+#### Aplicaciones parciales y _Currying_
 
 La _currificación_ es una técnica que nos permite manipular y transformar los inputs, para generalizar y favorecer la composición de funciones. Utilizando closures, podemos transformar los inputs de la función `add`
 
