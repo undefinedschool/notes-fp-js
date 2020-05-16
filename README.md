@@ -831,10 +831,8 @@ function once(decoratedFn) {
   function innerFn(input) {
     if (counter === 1) return 'Nope.';
 
-    const output = decoratedFn(input);
     counter++;
-
-    return output;
+    return decoratedFn(input);
   }
 
   return innerFn;
