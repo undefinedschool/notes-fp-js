@@ -54,6 +54,8 @@
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n)
     - [Recursión y ciclos](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#recursi%C3%B3n-y-ciclos)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
+  - [Function Decorators]()
+  - [Currying]()
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
   - [Higher-Order Functions](https://github.com/undefinedschool/notes-fp-js/blob/master/README.md#higher-order-functions-1)
@@ -811,6 +813,39 @@ En programación funcional, los closures nos permiten utilizar [_currying_](http
 👉 Ver [Notas sobre Closures](https://github.com/undefinedschool/notes-closures/)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-fp-js#contenido)
+
+### Function Decorators
+
+Nos permiten _editar_ o modificar el comportamiento de una función, sin reescribirla.
+
+Para esto, se crea una nueva función, que recibe como argumento a la función que queremos _editar_ y utilizamos [_closures_](https://github.com/undefinedschool/notes-closures/) para mantener el estado interno.
+
+Por ejemplo, si quisiéramos 'modificar' el comportamiento de una función para que este se ejecute una sola vez, podemos utilizar la función `once` definida a continuación. 
+
+> `once` es lo que se conoce como _function decorator_ o simplemente _decorator_.
+
+```js
+function once(decoratedFn) {
+  let counter = 0;
+
+  function innerFn(input) {
+    if (counter === 1) return 'Nope.';
+
+    const output = decoratedFn(input);
+    counter++;
+
+    return output;
+  }
+
+  return innerFn;
+}
+
+const multiplyBy2 = x => x * 2;
+const multiplyBy2Once = once(multiplyBy2);
+
+multiplyBy2Once(2); // 4;
+multiplyBy2Once(5); // 'Nope.'
+```
 
 ### Currying
 
