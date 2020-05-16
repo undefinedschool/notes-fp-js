@@ -1136,7 +1136,7 @@ function travelToThePast(years) {
 
 2. Implementar la función `movieSelector`, que recibe un array de objetos conteniendo información acerca de películas (id, título y puntaje). Encadenar invocaciones de `map`, `filter` y `reduce` para retornar un array que contenga sólo aquellar películas con un puntaje mayor a 5. 
 
-### Aplicación parcial y _Currying_
+### _Currying_
 
 1. Completar el código de la siguiente función de forma tal que utilice _currying_ para sumar `x`, `y` y `z`.
 
