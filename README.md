@@ -55,7 +55,7 @@
     - [Recursión y ciclos](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n-y-ciclos)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures)
     - [Function Decorators](https://github.com/undefinedschool/notes-fp-js#function-decorators)
-    - [Aplicaciones parciales y _Currying_]()
+    - [Aplicaciones parciales y _Currying_](https://github.com/undefinedschool/notes-fp-js#aplicaciones-parciales-y-currying)
 - [Ejercicios](https://github.com/undefinedschool/notes-fp-js#ejercicios-1)
   - [Funciones Puras](https://github.com/undefinedschool/notes-fp-js#funciones-puras-1)
   - [Higher-Order Functions](https://github.com/undefinedschool/notes-fp-js#higher-order-functions-1)
@@ -808,7 +808,7 @@ En el paradigma funcional buscamos evitar los [side effects](https://github.com/
 
 ### Closures
 
-En programación funcional, los closures nos permiten utilizar [_currying_](https://www.yazeedb.com/posts/deeply-understand-currying-in-7-minutes) y _aplicaciones parciales_ de funciones.
+En programación funcional, los closures nos permiten utilizar [_currying_](https://github.com/undefinedschool/notes-fp-js#aplicaciones-parciales-y-currying) y _aplicaciones parciales_ de funciones.
 
 👉 Ver [Notas sobre Closures](https://github.com/undefinedschool/notes-closures/)
 
