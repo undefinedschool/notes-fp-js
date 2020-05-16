@@ -63,7 +63,7 @@
   - [Recursión](https://github.com/undefinedschool/notes-fp-js#recursi%C3%B3n-1)
   - [Closures](https://github.com/undefinedschool/notes-fp-js#closures-1)
   - [Reduce](https://github.com/undefinedschool/notes-fp-js#reduce-1)
-  - [Aplicación parcial y _Currying_]()
+  - [_Currying_](https://github.com/undefinedschool/notes-fp-js#currying)
 - [Lecturas Recomendadas](https://github.com/undefinedschool/notes-fp-js#lecturas-recomendadas)
 
 ---
@@ -895,25 +895,45 @@ const decoratedFn = time(loop);
 
 #### Aplicaciones parciales y _Currying_
 
+##### Aplicación parcial
+
 Vimos que la [composición](https://github.com/undefinedschool/notes-fp-js#composici%C3%B3n-de-funciones) de funciones resulta muy útil para reutilizar funciones existentes, pero requiere que todas las funciones se comporten de la misma manera. Por ejemplo, tomar 1 input y retornar 1 output. Qué pasa si intentamos componer una función que retorno 1 valor con otra que espera recibir 2? Tenemos un problema de [aridad](https://github.com/undefinedschool/notes-fp-js#aridad), no coinciden.
 
-Una posible solución, para poder reutilizar y evitar escribir nuevas funciones, es [_decorar_](https://github.com/undefinedschool/notes-fp-js#function-decorators) esta función, donde le asignamos un valor por default a uno de sus inputs. Esto se conoce como _aplicación parcial_.
+Una posible solución, para poder reutilizar y evitar escribir nuevas funciones, es convertir ([_decorar_](https://github.com/undefinedschool/notes-fp-js#function-decorators)) esta función en una función que acepte de a 1 argumento y que se ejecute por completo recién cuando tenga todos los argumentos necesarios. 
+
+👉 Esto se conoce como _aplicación parcial_.
+
+Por ejemplo, si tenemos la función `sum`. Qué pasaría si sólo conocemos un argumento y no podemos o no queremos cambiar la implementación de la función? Podemos utilizar la aplicación parcial y ejecutar el resto de la función después.
 
 ```js
-const multiply = (a, b) => a * b
-function prefillFunction (fn, prefilledValue){
-    const inner = (liveInput) => {
-        const output = fn(liveInput, prefilledValue)
-        return output
-    }
-    return inner
-}
+const sum = (a, b) => a + b;
 
-const multiplyBy2 = prefillFunction(multiply, 2)
-const result = multiplyBy2(5)
+const partial = a => b => sum(a, b);
+
+const suspendedFn = partial(2);
+// cuando tengo el otro argumento, completo la ejecución
+const result = suspendedFn(3);
+console.log(result); // 5
 ```
 
-_Currificar_ una función significa convertir 1 función de _aridad_ `n` en `n` funciones de _aridad_ 1. Es decir, reestructurar una función de forma tal que reciba 1 argumento, luego retorne otra función que reciba el siguiente argumento, etc.
+Otro ejemplo
+
+```js
+const multiply = (a, b) => a * b;
+
+function prefill(fn, prefilledValue) {
+  const inner = liveInput => fn(liveInput, prefilledValue);
+  
+  return inner;
+}
+
+const multiplyBy2 = prefill(multiply, 2);
+const result = multiplyBy2(5);
+```
+
+##### _Currying_
+
+👉 **_Currificar_ una función significa convertir (utilizando aplicaciones parciales) 1 función de _aridad_ `n` en `n` funciones de _aridad_ 1 (unarias)**. Es decir, reestructurar una función de forma tal que reciba 1 argumento, luego retorne otra función que reciba el siguiente argumento, etc. 
 
 Por ejemplo
 
@@ -928,15 +948,7 @@ const curriedAdd = x =>
 curriedAdd(1)(2); // 3
 ```
 
-La función retornada tiene acceso a `x` y a `y` (a través del closure), por lo que podemos hacer
-
-```js
-const add10 = add(10);
-
-add10(10); // 20
-add10(20); // 30
-add10(30); // 40
-```
+Esto nos va a permitir componer cualquier función, independientemente de la cantidad de argumentos!
 
 ## Ejercicios
 
